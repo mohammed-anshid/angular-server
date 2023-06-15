@@ -30,7 +30,7 @@ export const sendEmail = async (data:any) => {
 
         await smtpTransport.sendMail({
             from : 'mohammedanshid100@gmail.com',
-            to : 'mohammedanshid101@gmail.com',
+            to : 'sujay@safeproindia.com',
             subject : 'Candidates Applications Data',
             text : emailContent
         }).then((response)=>{
