@@ -5,13 +5,13 @@ export const sendEmail = async (data:any) => {
     try {
 
         const smtpTransport = nodemailer.createTransport({
-            host: process.env.HOST,
-            service:process.env.SERVICE,
+            host: 'smtp.mailtrap.io',
+            service:'Gmail',
             port: 587,
             secure: true,
             auth: {
-              user:process.env.USER_NAME,
-              pass:process.env.PASS ,
+              user:'mohammedanshid100@gmail.com',
+              pass:'egfnldkmybpipgof',
             },
         });
 
@@ -29,8 +29,8 @@ export const sendEmail = async (data:any) => {
         `;
 
         await smtpTransport.sendMail({
-            from : process.env.USER_NAME,
-            to : 'sujay@safeproindia.com',
+            from : 'mohammedanshid100@gmail.com',
+            to : 'mohammedanshid101@gmail.com',
             subject : 'Candidates Applications Data',
             text : emailContent
         }).then((response)=>{
